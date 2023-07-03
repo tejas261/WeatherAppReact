@@ -8,7 +8,7 @@ The following details of the city are being provide by this application:
 As mentioned, this app is built using React, a frontend JavaScript framework and JSX which is a mixture of HTML and JavaScript.
 Also an external API is used that is provided by OpenWeather to fetch the weather details of any location
 
-Link : 
+Download Link : https://github.com/tejas261/WeatherAppReact
 
 Steps to  run this app on your system locally:
 

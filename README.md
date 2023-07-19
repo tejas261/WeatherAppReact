@@ -1,5 +1,5 @@
 This is a Weather App that I built to know the weather conditions of a place using React.
-The following details of the city are being provide by this application:
+The following details of the city are being provided by this application:
 1. Temperature
 2. Current Weather condition
 3. Humidity

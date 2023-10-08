@@ -12,26 +12,47 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+
         document.getElementById("h2").innerHTML = "Weather in  " + data.name;
 
         document.getElementById("temp").innerHTML =
           Math.round(data.main.temp - 273.15) + "<sup>o</sup> C";
 
-        document.getElementById("weather1").innerHTML =
+        document.getElementById("weather1").innerHTML = "Weather Condition : "+
           data.weather[0].description.toUpperCase();
 
         document.getElementById("weather2").innerHTML =
-          "Humidity : " + data.main.humidity;
+          "Humidity : " + data.main.humidity + " %";
 
         document.getElementById("weather3").innerHTML =
-          "Wind Speed : " + data.wind.speed;
+          "Wind Speed : " + data.wind.speed + " m/s";
 
-        document.getElementById("img").src =
-          "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+        // document.getElementById("img").src =
+        //   "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
-      }).catch(()=>{
-        alert("Check your city name nad try again😢😢");
+        const weatherCondition = data.weather[0].main.toLowerCase();
+
+        // Remove any existing weather classes from temp-bg
+        const tempBg = document.getElementById("temp-bg");
+        tempBg.classList.remove("clear", "clouds", "rain", "snow", "haze");
+
+        // Add the appropriate weather class to temp-bg
+        if (weatherCondition === "clear") {
+          tempBg.classList.add("clear");
+        } else if (weatherCondition === "clouds") {
+          tempBg.classList.add("clouds");
+        } else if (weatherCondition === "rain") {
+          tempBg.classList.add("rain");
+        } else if (weatherCondition == "haze") {
+          tempBg.classList.add("haze");
+        } else if (weatherCondition === "snow") {
+          tempBg.classList.add("snow");
+        }
       })
+
+      .catch(() => {
+        alert("Check your city name and try again😢😢");
+      });
   };
 
   return (
@@ -49,21 +70,20 @@ function App() {
       </div>
 
       <div className="main">
-
-      <div className="leftcontent">
+        <div className="leftcontent">
           <h2 id="h2"> </h2>
-          <h1 id="temp"></h1>
+          <div id="temp-bg">
+            <h1 id="temp"></h1>
+          </div>
         </div>
 
         <div className="content">
           <div className="next">
-            <img id="img" src=" " />
-            <h5 id="weather1"> </h5>
+            <h3 id="weather1"> </h3>
           </div>
           <h3 id="weather2"></h3>
           <h3 id="weather3"> </h3>
         </div>
-
       </div>
     </div>
   );

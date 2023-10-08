@@ -1,5 +1,5 @@
 This is a Weather App that I built to know the weather conditions of a place using React.
-The following details of the city are being provide by this application:
+The following details of the city are being provided by this application:
 1. Temperature
 2. Current Weather condition
 3. Humidity
@@ -8,7 +8,7 @@ The following details of the city are being provide by this application:
 As mentioned, this app is built using React, a frontend JavaScript framework and JSX which is a mixture of HTML and JavaScript.
 Also an external API is used that is provided by OpenWeather to fetch the weather details of any location
 
-Link : 
+Download Link : https://github.com/tejas261/WeatherAppReact
 
 Steps to  run this app on your system locally:
 

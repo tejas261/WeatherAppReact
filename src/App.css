@@ -1,0 +1,32 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 100vh;
+  background: #0c0c0c;
+  color: #fff; 
+}
+
+.grid{
+  padding: 10px;
+}
+
+.divs{
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px;
+  background: #000;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+/* @media screen and (min-width: 600px) and (max-width: 900px) {
+
+  div.left{
+    width:90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+} */

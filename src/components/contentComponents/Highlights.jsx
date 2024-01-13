@@ -85,7 +85,7 @@ function Highlights() {
         <div className='divs'>
           <h1>Feels Like</h1>
           <div className="flex p-2">
-            <img className="w-16" src="../WeatherAppReact/public/assets/temp.png" alt="" />
+            <img className="w-16" src="../public/assets/temp.png" alt="" />
             <h1 className="ml-4 flex justify-center items-center">
               {Math.floor(weatherdata.days[0].feelslike)}<sup>o</sup> C
             </h1>

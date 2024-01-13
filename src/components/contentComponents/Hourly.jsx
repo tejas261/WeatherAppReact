@@ -19,7 +19,7 @@ function Hourly() {
                 return(
                 <div className='w-[100%] p-6'>
                 <h1 className="p-2">{hours.datetime.slice(0,5)}</h1>
-                <img width={50} src={`../src/assets/${weatherCondition}.png`} alt="" />
+                <img width={50} src={`../WeatherAppReact/public/assets/${weatherCondition}.png`} alt="" />
                 <h1 className="p-2">{hours.temp}<sup>o</sup> C</h1>
             </div>
                 )
@@ -31,14 +31,3 @@ function Hourly() {
 
 export default Hourly;
 
-{
-  /* {weatherdata.days[0].hours.slice(0,10).map((hours)=>{
-                return(
-                <div className='w-[100%] border-white border-2'>
-                <h1>{hours.datetime.slice(0,5)}</h1>
-                <img width={50} src={`../src/assets/${weatherCondition}.png`} alt="" />
-                <h1>{hours.temp}<sup>o</sup> C</h1>
-            </div>
-                )
-            })} */
-}

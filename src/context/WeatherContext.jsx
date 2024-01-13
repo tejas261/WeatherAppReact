@@ -28,8 +28,7 @@ const WeatherProvider=({children})=>{
         const res = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}%20?unitGroup=metric&key=${import.meta.env.VITE_APIKEY}&contentType=json`)
         const data = res.data
         setweatherdata(data)
-        setWeatherCondition(data.currentConditions.conditions)
-        console.log("This is data",data)
+        setWeatherCondition(data.days[0].conditions.toLowerCase().replaceAll(" ","-"))
     }
 
     const airData = async(e)=>{
@@ -38,7 +37,6 @@ const WeatherProvider=({children})=>{
           `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${import.meta.env.VITE_APIKEY}&contentType=json&elements=datetime,pm1,pm2p5,pm10,o3,no2,so2,co`
         );
         const newData = res.data
-        console.log(newData);
         setData(newData);
       } catch (error) {
         console.error("Error fetching data:", error);

@@ -51,7 +51,7 @@ function CurrentTemp() {
             {" "}
             <img
               className="m-4 w-28 inline-block"
-              src={`../src/assets/${weatherCondition.toLowerCase()}.png`}
+              src={`../WeatherAppReact/public/assets/${weatherCondition}.png`}
               alt=""
             />
           </span>

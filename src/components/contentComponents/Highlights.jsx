@@ -14,7 +14,7 @@ function Highlights() {
         <div className="w-[50rem] text-3xl p-4">
           <h1>Air Quality Index</h1>
           <div className="flex border-white rounded-2xl border-2 p-6 justify-between m-5">
-            <img className="w-16" src="../../../public/assets/air.png" alt="" />
+            <img className="w-16" src="../../public/assets/air.png" alt="" />
             <div>
               <h4>CO</h4>
               <h1>{data.days[0].co}</h1>

@@ -1,5 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { WeatherContext } from "../../context/WeatherContext";
+import air from '../../../public/assets/air.png'
+import sunrise from '../../../public/assets/sunset.png'
+import sunset from '../../../public/assets/sunrise.png'
+import humidity from '../../../public/assets/humidity.png'
+import pressure from '../../../public/assets/pressure.png'
+import wind from '../../../public/assets/wind.png'
+import temp from '../../../public/assets/temp.png'
 
 function Highlights() {
   const {data,weatherdata} = useContext(WeatherContext)
@@ -14,7 +21,7 @@ function Highlights() {
         <div className="w-full text-3xl p-4">
           <h1>Air Quality Index(in Ppm)</h1>
           <div className="flex border-white rounded-2xl border-2 p-6 justify-between m-5">
-            <img className="w-16" src="../src/assets/air.png" alt="" />
+            <img className="w-16" src={air} alt="" />
             <div>
               <h4>CO</h4>
               <h1>{data.days[0].co}</h1>
@@ -43,12 +50,12 @@ function Highlights() {
         <div className="w-full text-3xl p-4">
           <h1>Sunrise and Sunset</h1>
           <div className="flex border-white rounded-2xl border-2 m-5 p-6  justify-between">
-          <img className="w-16" src="../src/assets/sunset.png"/>
+          <img className="w-16" src={sunrise}/>
             <div>
               <h4>Sunrise</h4>
               <h1>{weatherdata.currentConditions.sunrise.slice(0,5)}</h1>
             </div>
-            <img className="w-16" src="../src/assets/sunrise.png"/>
+            <img className="w-16" src={sunset}/>
             <div>
               <h4>Sunset</h4>
               <h1>{weatherdata.currentConditions.sunset.slice(0,5)}</h1>
@@ -61,7 +68,7 @@ function Highlights() {
         <div className='divs'>
           <h1 className="mb-2">Humidity</h1>
           <div className="flex p-2">
-            <img className="w-16" src="../src/assets/humidity.png" alt="" />
+            <img className="w-16" src={humidity} alt="" />
               <h1 className="ml-4 flex justify-center items-center">{weatherdata.days[0].humidity} %</h1>
           </div>
         </div>
@@ -69,7 +76,7 @@ function Highlights() {
         <div className='divs'>
           <h1>Pressure</h1>
           <div className="flex p-2">
-          <img className="w-16" src="../src/assets/pressure.png" alt="" />
+          <img className="w-16" src={pressure} alt="" />
             <h1 className="ml-4 flex justify-center items-center">{Math.floor(weatherdata.days[0].pressure)}hPa</h1>
           </div>
         </div>
@@ -77,7 +84,7 @@ function Highlights() {
         <div className='divs'>
           <h1>Wind Speed</h1>
           <div className="flex p-2">
-            <img className="w-16" src="../src/assets/wind.png" alt="" />
+            <img className="w-16" src={wind} alt="" />
             <h1 className="ml-4 flex justify-center items-center">{Math.floor(weatherdata.days[0].windspeed)} KPH</h1>
           </div>
         </div>
@@ -85,7 +92,7 @@ function Highlights() {
         <div className='divs'>
           <h1>Feels Like</h1>
           <div className="flex p-2">
-            <img className="w-16" src="../src/assets/temp.png" alt="" />
+            <img className="w-16" src={temp} alt="" />
             <h1 className="ml-4 flex justify-center items-center">
               {Math.floor(weatherdata.days[0].feelslike)}<sup>o</sup> C
             </h1>

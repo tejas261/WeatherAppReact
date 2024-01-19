@@ -8,21 +8,6 @@ const WeatherProvider=({children})=>{
   const [data,setData] = useState({})
   const [weatherCondition,setWeatherCondition] = useState("")
     const [city, setcity] = useState("Bengaluru")
-    // const getLoc=()=>{
-    //     if(navigator.geolocation){
-    //       navigator.geolocation.getCurrentPosition(showPosition)
-    //     }
-    //     else{
-    //       alert("error!!!")
-    //     }
-    //   }
-    
-    //   function showPosition(position){
-    //     console.log(position)
-    //     setlat(position.coords.latitude)
-    //     setlon(position.coords.longitude)
-      // }
-
 
     const fetchWeather=async()=>{
         const res = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}%20?unitGroup=metric&key=${import.meta.env.VITE_APIKEY}&contentType=json`)

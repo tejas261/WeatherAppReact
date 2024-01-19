@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { WeatherContext } from "../../context/WeatherContext";
-import path from '../../../public/assets'
 
 function CurrentTemp() {
   const weekday = [
@@ -52,7 +51,7 @@ function CurrentTemp() {
             {" "}
             <img
               className="m-4 w-28 inline-block"
-              src={`${path}/${weatherCondition.toLowerCase()}.png`}
+              src={`../src/assets/${weatherCondition.toLowerCase()}.png`}
               alt=""
             />
           </span>

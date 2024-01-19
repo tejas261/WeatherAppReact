@@ -28,7 +28,7 @@ const WeatherProvider=({children})=>{
         const res = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}%20?unitGroup=metric&key=${import.meta.env.VITE_APIKEY}&contentType=json`)
         const data = res.data
         setweatherdata(data)
-        setWeatherCondition(data.days[0].conditions.toLowerCase().replaceAll(" ","-"))
+        setWeatherCondition(data.currentConditions.conditions)
     }
 
     const airData = async(e)=>{

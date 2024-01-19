@@ -12,15 +12,15 @@ function Hourly() {
     return <div>Loading....</div>;
   }
   return (
-    <div className="w-[100%] text-3xl p-4">
+    <div className="text-3xl bg-[#191919] m-10 rounded-3xl p-4">
       <h1>Today At</h1>
       <div className="flex border-white rounded-2xl border-2 m-5 p-6 justify-between bg-black">
-      {weatherdata.days[0].hours.filter((x,i)=> i%3===0).slice(0,10).map((hours)=>{
+      {weatherdata.days[0].hours.filter((x,i)=> i%3===0).slice(0,10).map((hours,index)=>{
                 return(
-                <div className='w-[100%] p-6'>
+                <div key={index++} className='w-full p-6'>
                 <h1 className="p-2">{hours.datetime.slice(0,5)}</h1>
-                <img width={50} src={`../WeatherAppReact/public/assets/${weatherCondition}.png`} alt="" />
-                <h1 className="p-2">{hours.temp}<sup>o</sup> C</h1>
+                <img width={50} src={`../src/assets/${weatherCondition}.png`} alt="" />
+                <h1 className="p-2">{Math.round(hours.temp)}<sup>o</sup> C</h1>
             </div>
                 )
             })}
@@ -30,4 +30,3 @@ function Hourly() {
 }
 
 export default Hourly;
-

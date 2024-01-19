@@ -6,12 +6,12 @@ function Navbar() {
     
   return (
     <>
-      <nav className="flex">
-        <div className="flex w-20 p-6">
+      <nav className="flex justify-between min-w-[752px]">
+        <div className="flex items-center w-20 p-6">
           <span>
             <i className="fa-solid fa-temperature-three-quarters text-[50px]"></i>
           </span>
-            <h1 className="text-5xl">The Weather Dashboard</h1>
+            <h1 className="text-5xl px-6">The Weather Dashboard</h1>
         </div>
 
         <div className="nav mt-16 w-[80%]">

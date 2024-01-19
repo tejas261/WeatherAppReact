@@ -37,7 +37,7 @@ function CurrentTemp() {
   }
   return (
     <div>
-      <div className="h-[33rem] p-6  bg-black rounded-3xl">
+      <div className="h-[33rem] p-6 w-full bg-black rounded-3xl">
         <h1 className="text-center font-bold text-3xl">
           {weatherdata.resolvedAddress}
         </h1>
@@ -51,7 +51,7 @@ function CurrentTemp() {
             {" "}
             <img
               className="m-4 w-28 inline-block"
-              src={`../WeatherAppReact/public/assets/${weatherCondition}.png`}
+              src={`../src/assets/${weatherCondition.toLowerCase()}.png`}
               alt=""
             />
           </span>

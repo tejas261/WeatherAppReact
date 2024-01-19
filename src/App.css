@@ -3,8 +3,7 @@ body{
   margin: 0;
   box-sizing: border-box;
   background-color: #fff;
-  height: 100vh;
-  background: #0c0c0c;
+  background: rgb(9,9,9);
   color: #fff; 
 }
 
@@ -20,13 +19,3 @@ body{
   border-radius: 20px;
   border: 2px solid white;
 }
-
-/* @media screen and (min-width: 600px) and (max-width: 900px) {
-
-  div.left{
-    width:90vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-} */

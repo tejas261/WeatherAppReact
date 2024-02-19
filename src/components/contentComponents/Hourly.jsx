@@ -19,7 +19,7 @@ function Hourly() {
                 return(
                 <div key={index++} className='w-full p-6'>
                 <h1 className="p-2">{hours.datetime.slice(0,5)}</h1>
-                <img width={50} src={`public/assets/${weatherCondition}.png`} alt="" />
+                <img width={50} src={`public/static/assets/${weatherCondition.toLowerCase()}.png`} alt="" />
                 <h1 className="p-2">{Math.round(hours.temp)}<sup>o</sup> C</h1>
             </div>
                 )

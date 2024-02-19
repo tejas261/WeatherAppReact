@@ -37,7 +37,7 @@ function CurrentTemp() {
   }
   return (
     <div>
-      <div className="h-[33rem] p-6 w-full bg-black rounded-3xl">
+      <div className="h-[35rem] p-6 w-full bg-black rounded-3xl">
         <h1 className="text-center font-bold text-3xl">
           {weatherdata.resolvedAddress}
         </h1>
@@ -47,15 +47,13 @@ function CurrentTemp() {
           <sup>o</sup>C
         </h1>
         <div>
-          <span>
             {" "}
             <img
               className="m-4 w-28 inline-block"
-              src={`public/assets/${weatherCondition.toLowerCase()}.png`}
+              src={`public/static/assets/${weatherCondition.toLowerCase()}.png`}
               alt=""
             />
-          </span>
-          <h1 className="m-8 inline text-3xl">
+          <h1 className="ml-8 inline text-3xl">
             {weatherdata.days[0].conditions}
           </h1>
         </div>
